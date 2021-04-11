@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["world","console","log"],"mappings":"AAAA,IAAMA,KAAK,GAAG,OAAd;AACAC,OAAO,CAACC,GAAR,iBAAqBF,KAArB","file":"PEC1.e31bb0bc.js","sourceRoot":"..","sourcesContent":["const world = 'world';\r\nconsole.log(`Hello ${world}`);"]}
