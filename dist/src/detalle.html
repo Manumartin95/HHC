@@ -4,27 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.e308ff8e.css">
+    
     <title>Document</title>
 </head>
 <body>
     <header>
-        <a href="/index.html">
-            <img class="logo" src="/cocinando.f76c28f8.svg" alt="Logo de la web">
+        <a class="logo  no-decoration" href="/index.html">
+            <img class="logo-img" src="/palmera.e06cd7fe.png" alt="Logo de la web">
+            <div class="logo-text">
+                <span>CARIBEAN</span>
+                <span>FOOD</span>
+            </div>
         </a>
-        <nav>
-            <ul class="header-list">
-                <li class="nav-item"><a href="/src\presentacion.html">PRESENTACIÓN</a></li>
-                <li class="nav-item"><a href="/src\categoria.html">CATEGORÍA</a></li>
-                <li class="nav-item"><a href="/src\enlaces.html">ENLACES</a></li>
-            </ul>
-        </nav>
+        
+            <nav class="header-list">
+                <a class="nav-item" href="/src\presentacion.html">PRESENTACIÓN</a>
+                <a class="nav-item" href="/src\categoria.html">CATEGORÍA</a>
+                <a class="nav-item" href="/src\enlaces.html">ENLACES</a>
+            </nav>
+        
     </header>
-
     <main>
         <article>
-            <img src="/ceviche.11285732.jpg" alt="Imagen de ceviche caribeño">
-            <h2>CEVICHE CARIBEÑO</h2>
+            <ul class="breadcrumb">
+                <li><a class="no-decoration" href="#">Home</a></li>
+                <li><a class="no-decoration" href="#">Categoría</a></li>
+                <li>Ceviche caribeño</li>
+              </ul>
+
+            <div>
+                <img class="details-image" src="/ceviche.11285732.jpg" alt="Imagen de ceviche caribeño">
+                <h2>CEVICHE CARIBEÑO</h2>
+            </div>
+            
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum explicabo tenetur saepe beatae ullam illo odio unde quasi illum nisi.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum facilis commodi, rem, qui aspernatur ratione modi voluptatibus unde dolores officia optio repellendus? Natus veritatis fugit unde laborum vitae cupiditate repellat.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, distinctio. Enim accusantium at ratione qui.</p>
@@ -91,18 +105,30 @@
                     <span class="instruction-number">1.</span>
                     <span class="description">En un bowl, Pyrex o cerámica, coloca el pescado, cebolla, tomate, chile serrano, sal, cayena y orégano.</span>
                 </li>
-                <img class="instruction-image" src="/detalle1.65295286.jpg" alt="Imagen del resultado de las instrucciones 1">
+                <img class="details-image" src="/detalle1.65295286.jpg" alt="Imagen del resultado de las instrucciones 1">
                 <li class="instruction">
                     <span class="instruction-number">2.</span>
                     <span class="description">Cubrir con lima y jugo de limón. Deja reposar cubierto en el refrigerador durante una hora, luego revuelve, asegurándote de que más de los peces se exponga a los jugos de limón. Añadir el mango. Dejar reposar durante varias horas, dando tiempo para que los sabores se mezclen.</span>
                 </li>
-                <img class="instruction-image" src="/detalle2.d7c79cb7.jpg" alt="Imagen del resultado de las instrucciones 2">
+                <img class="details-image" src="/detalle2.d7c79cb7.jpg" alt="Imagen del resultado de las instrucciones 2">
                 <li class="instruction">
                     <span class="instruction-number">3.</span>
                     <span class="description">Veras el cambio de los pescados de un color blanco translúcido a más opaco.</span>
                 </li>
             </ul>
+            <div class="review">
+                <p>¿Te ha gustado la receta? Deja una nota positiva</p>
+                <div class="star-review">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <button>Enviar</button>
+            </div>
         </article>
     </main>
+    <footer></footer>
 </body>
 </html>

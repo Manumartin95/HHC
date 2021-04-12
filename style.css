@@ -6,14 +6,14 @@ body {
     font-family: 'Montserrat';
 }
 
-main{
+article{
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
 }
 
 @media all and (max-width:50em){
-    main{
+    article{
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -98,21 +98,22 @@ footer{
 }
 
 /**HOME*/
-
-main h1{
-    color: #4bacb8;
-    border-bottom: 2px solid;
-    width: 55%;
-}
-
-.home{
-    padding-top: 15vh;
-    text-align: center;
+.border-top{
+    background-color: #009eae;
+    opacity: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 20px;
+    justify-content: center;
 }
 
 .logo-index{
     width: 300px;
     height: 300px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid black;
 }
 
 .link-container{
@@ -143,17 +144,43 @@ main h1{
 
 /**PRESENTACIÓN*/
 
-.presentacion{
-    text-align: center;
-}
-
 .presentacion article{
     text-align: justify;
 }
 
 article figure{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin: 3% 0;
 }
+
+figure img{
+    width: 100%;
+}
+
+figcaption{
+    font-size: .9rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+@media all and (min-width:60em){
+    figure img{
+        max-width: 50%;
+    }
+}
+
+.video{
+    text-align: center;
+    margin: 3% 0;
+}
+
+.video iframe{
+    max-width: 90%;
+}
+
 
 /**CATEGORIA*/
 
@@ -184,7 +211,7 @@ article figure{
     flex: 1 1;
     margin-top: 3rem;
     max-width: 25rem;
-    background-color: #b4ffff;
+    background-color: #33b1be78;
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
 }
 
@@ -201,6 +228,7 @@ article figure{
 .food-content{
     padding: 1rem;
 }
+
 
 /**DETALLES*/
 
@@ -229,6 +257,35 @@ article figure{
     width: 100%;
 }
 
+.details-image{
+    margin: 3% 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+}
+
+.review{
+    padding: 2rem;
+    background-color: #e0e0e0;
+}
+
+.review button{
+    margin-top: 10px;
+    padding: .7rem;
+}
+
+.fa.fa-star:hover{
+    color:orange;
+}
+
+@media all and (max-width: 50em){
+    .details-image{
+    width: 100%;
+    }
+}
+
+
 /**GENERAL*/
 
 .no-decoration{
@@ -247,4 +304,39 @@ article figure{
 .active{
     font-weight: 700;
     border-bottom: 3px solid white;
+}
+
+h1{
+    color: #4bacb8;
+    border-bottom: 2px solid;
+    width: 55%;
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.7rem;
+}
+
+h3{
+    font-size: 1.4rem;
+}
+
+.breadcrumb{
+    list-style: none;
+    display: flex;
+    color: #4bacb8;
+}
+
+.breadcrumb a{
+    color: inherit;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    content: "/\00a0";
+}
+
+.breadcrumb a:hover{
+    text-decoration: underline 1px solid;
+    font-weight: 700;
 }
