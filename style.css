@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap');
+@import "@fortawesome/fontawesome-free/css/all.css";
 
 body {
     margin: 0; 
@@ -6,7 +6,7 @@ body {
     font-family: 'Montserrat';
 }
 
-article{
+main{
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
@@ -23,7 +23,7 @@ article{
 
 header{
     background-color: #009eae;
-    opacity: 80%;
+    opacity: .8;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -100,11 +100,11 @@ footer{
 /**HOME*/
 .border-top{
     background-color: #009eae;
-    opacity: 80%;
+    opacity: .8;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 5px 20px;
+    padding: 5rem;
     justify-content: center;
 }
 
@@ -113,7 +113,7 @@ footer{
     height: 300px;
     background-color: white;
     border-radius: 50%;
-    border: 5px solid black;
+    border: 8px solid black;
 }
 
 .link-container{
@@ -131,16 +131,22 @@ footer{
     padding: 10px;
 }
 
-.link{
-    font-size: larger;
-    font-weight: 400;
-    color: #A01127;    
-}
-
-.link:hover{
+.link-item:hover{
     font-weight: 700;
+    border-bottom: 3px solid #33b1be;
+    box-shadow: 0 4px 6px -5px #33b1be;
 }
 
+.link{
+    color: #33b1be;
+    font-size: 1.4rem;
+}
+
+.lema{
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: italic;
+}
 
 /**PRESENTACIÓN*/
 
@@ -216,7 +222,7 @@ figcaption{
 }
 
 .food a:hover{
-    opacity: 90%;
+    opacity: .9;
     box-shadow: 0 50px 50px -14px rgba(0,0,0,0.25);
 }
 
@@ -266,8 +272,10 @@ figcaption{
 }
 
 .review{
+    margin-top: 5%;
     padding: 2rem;
     background-color: #e0e0e0;
+    text-align: left;
 }
 
 .review button{
@@ -275,12 +283,49 @@ figcaption{
     padding: .7rem;
 }
 
-.fa.fa-star:hover{
-    color:orange;
+.star-review{
+    direction: rtl;
 }
 
+.review a{
+    color:black;
+    transition: color .4s;
+}
+
+.review a:hover,
+.review a:hover ~ a,
+.review a:focus,
+.review a:focus ~ a {
+	color: orange;
+	cursor: pointer;
+	}
+
+.relationed-foods{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.relationed-food{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    background-color: #33b1be78;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+}
+
+.relationed-food:hover{
+    opacity: .8;
+    box-shadow: 0 50px 50px -14px rgba(0,0,0,0.25);
+}
+
+.rel-food-img{
+    width: 400px;
+}
+
+ 
 @media all and (max-width: 50em){
-    .details-image{
+    .details-image, .rel-food-img{
     width: 100%;
     }
 }
@@ -339,4 +384,14 @@ ul.breadcrumb li+li:before {
 .breadcrumb a:hover{
     text-decoration: underline 1px solid;
     font-weight: 700;
+}
+
+.bigger{
+    font-size: 4rem;
+}
+
+@media all and (max-width:50em){
+    .bigger{
+        font-size: 3rem;
+    }
 }
