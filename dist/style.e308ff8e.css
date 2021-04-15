@@ -4631,7 +4631,7 @@ main{
 }
 
 @media all and (max-width:50em){
-    article{
+    main{
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -4679,7 +4679,7 @@ header{
 
 .nav-item:hover{
     font-weight: 700;
-    border-bottom: 3px solid white;
+    border-bottom: 4px solid white;
 }
 
 .logo{
@@ -4839,6 +4839,10 @@ figcaption{
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
 }
 
+.food a{
+    height: 100%;
+}
+
 .food a:hover{
     opacity: .9;
     box-shadow: 0 50px 50px -14px rgba(0,0,0,0.25);
@@ -4918,6 +4922,11 @@ figcaption{
 	cursor: pointer;
 	}
 
+#thanks-text{
+    font-weight: 700;
+    display: none;
+}
+
 .relationed-foods{
     display:flex;
     justify-content: center;
@@ -4939,6 +4948,7 @@ figcaption{
 
 .rel-food-img{
     width: 400px;
+    height: 100%;
 }
 
  
