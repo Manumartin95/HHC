@@ -93,8 +93,9 @@ footer{
     background-color: #757575;
     color: #fff;
     text-align: center;
-    padding: 20px;
     margin-top: 5%;
+    padding: 20px;
+    
 }
 
 /**HOME*/
@@ -185,6 +186,7 @@ figcaption{
 
 .video iframe{
     max-width: 90%;
+    border: 0;
 }
 
 
@@ -392,7 +394,7 @@ ul.breadcrumb li+li:before {
 }
 
 .breadcrumb a:hover{
-    text-decoration: underline 1px solid;
+    text-decoration: underline;
     font-weight: 700;
 }
 
