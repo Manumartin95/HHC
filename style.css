@@ -67,6 +67,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 5px 20px;
     flex-wrap: wrap;
 }
@@ -390,6 +391,7 @@ h3{
 .breadcrumb{
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     color: #4bacb8;
 }
 
