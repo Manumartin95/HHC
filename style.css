@@ -68,6 +68,7 @@ header{
     display: flex;
     align-items: center;
     padding: 5px 20px;
+    flex-wrap: wrap;
 }
 
 .logo-text{
@@ -98,7 +99,7 @@ footer{
     
 }
 
-/**HOME*/
+/**PORTADA*/
 .border-top{
     background-color: #009eae;
     opacity: .8;
@@ -115,6 +116,13 @@ footer{
     background-color: white;
     border-radius: 50%;
     border: 8px solid black;
+}
+
+@media all and (max-width:30em){
+    .logo-index{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .link-container{
@@ -287,6 +295,7 @@ figcaption{
 .review button{
     margin-top: 10px;
     padding: .7rem;
+    font-family: 'Montserrat';
 }
 
 .star-review{
@@ -402,8 +411,9 @@ ul.breadcrumb li+li:before {
     font-size: 4rem;
 }
 
+
 @media all and (max-width:50em){
     .bigger{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 }
