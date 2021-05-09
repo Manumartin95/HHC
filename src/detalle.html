@@ -12,7 +12,7 @@
 <body>
     <header>
         <a class="logo  no-decoration" href="../index.html">
-            <img class="logo-img" src="../assets/images/palmera.png" alt="Logo de la web">
+            <img  class="logo-img" src="../assets/images/logo.svg" alt="Logo de la web">
             <div class="logo-text">
                 <span>CARIBEAN</span>
                 <span>FOOD</span>
@@ -26,6 +26,7 @@
             </nav>
         
     </header>
+
     <main>
         <article>
             <ul class="breadcrumb">
@@ -35,7 +36,13 @@
               </ul>
 
             <div>
-                <img class="details-image" src="../assets/images/ceviche.jpg" alt="Imagen de ceviche caribeño">
+                <!-- <img class="details-image" src="../assets/images/ceviche-800.jpg" alt="Imagen de ceviche caribeño"> -->
+                <picture>
+                    <source media="(max-width: 799px)" srcset="../assets/images/ceviche-recortado.jpg">
+                    <source media="(min-width: 800px)" srcset="../assets/images/ceviche-800.jpg">
+                    <img class="details-image" src="../assets//images/ceviche-800.jpg" alt="Imagen de ceviche">
+                </picture>
+
                 <h2>CEVICHE CARIBEÑO</h2>
             </div>
             
@@ -133,7 +140,7 @@
             <h2>Otras recetas caribeñas..</h2>
             <div class="relationed-foods">
                 <a href="./detalle.html" class="relationed-food no-decoration black">
-                    <img src="../assets/images/arepas.jpg" alt="" class="rel-food-img">
+                    <img src="../assets/images/arepas-300.jpeg" alt="" class="rel-food-img">
                     <div class="food-content">
                         <h3>Arepas</h3>
                     </div>
@@ -153,8 +160,14 @@
             </div>
         </section>
     </main>
-    <footer>
-        <span> &copy; Caribean Food</span>
+
+    <footer class="footer">
+        <img class="footer-logo" src="../assets/images/logo2.svg" alt="Imagen del logo sin colores">
+        <ul class="footer-list">
+            <li class="footer-item"><a href="./presentacion.html">¿QUIENES SOMOS?</a></li>
+            <li class="footer-item"><a href="./categoria.html">RECETAS CARIBEÑAS</a></li>
+            <li class="footer-item"><a href="./enlaces.html">ENLACES</a></li>
+        </ul>
     </footer>
     <script src="../index.js"></script>
 </body>

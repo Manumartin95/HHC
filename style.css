@@ -68,7 +68,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 20px;
+    padding: 8px 20px;
     flex-wrap: wrap;
 }
 
@@ -82,16 +82,12 @@ header{
 }
 
 .logo-img{    
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border-radius: 50%;
-    border: 5px solid black;
+    width: 7.5rem;
 }
 
 /**FOOTER*/
 
-footer{
+.footer{
     background-color: #757575;
     color: #fff;
     text-align: center;
@@ -100,15 +96,46 @@ footer{
     
 }
 
+.footer-logo{
+    width: 70px;
+    color: white;
+}
+
+.footer-list{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+}
+
+.footer-item{
+    margin: .3rem;
+    padding: .3rem;
+}
+
+.footer-item a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.footer-item a:hover{
+    font-weight: 700;
+}
+
+
 /**PORTADA*/
 .border-top{
     background-color: #009eae;
-    opacity: .8;
+    /* opacity: .8; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 5rem;
-    justify-content: center;
+    /* padding: 5rem; */
+    /* justify-content: center; */
+    justify-content: space-between;
 }
 
 .logo-index{
@@ -141,15 +168,27 @@ footer{
     padding: 10px;
 }
 
-.link-item:hover{
-    font-weight: 700;
-    border-bottom: 3px solid #33b1be;
-    box-shadow: 0 4px 6px -5px #33b1be;
-}
-
 .link{
     color: #33b1be;
     font-size: 1.4rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 0.2rem;
+    background-color: #33b1be;
+    transition: width 0.5s ease-in;
+}
+
+.link:focus::after,
+.link:hover::after{
+    width: 100%;
 }
 
 .lema{
@@ -157,6 +196,17 @@ footer{
     font-size: 1.2rem;
     font-style: italic;
 }
+
+.test{
+    max-width: 100%;
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+}
+
+.test2{
+    max-width: 100%;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
 
 /**PRESENTACIÓN*/
 
@@ -172,20 +222,14 @@ article figure{
     margin: 3% 0;
 }
 
-figure img{
-    width: 100%;
+picture img{
+    max-width: 100%;
 }
 
 figcaption{
     font-size: .9rem;
     margin-top: 5px;
     font-style: italic;
-}
-
-@media all and (min-width:60em){
-    figure img{
-        max-width: 50%;
-    }
 }
 
 .video{
@@ -282,7 +326,7 @@ figcaption{
     margin: 3% 0;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    max-width: 590;
     display: block;
 }
 
