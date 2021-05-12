@@ -4682,11 +4682,16 @@ header{
     border-bottom: 4px solid white;
 }
 
+.active{
+    font-weight: 700;
+    border-bottom: 4px solid white;
+}
+
 .logo{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 20px;
+    padding: 10px 20px;
     flex-wrap: wrap;
 }
 
@@ -4694,13 +4699,13 @@ header{
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
-    color: white;
+    color: #fff;
     font-size: 2rem;
     font-weight: 700;
 }
 
 .logo-img{    
-    width: 7.5rem;
+    width: 7rem;
 }
 
 /**FOOTER*/
@@ -4784,6 +4789,8 @@ header{
     display: inline-block;
     margin: 5px;
     padding: 10px;
+    -webkit-animation: slideIn 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation: slideIn 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .link{
@@ -4862,6 +4869,42 @@ figcaption{
     border: 0;
 }
 
+.sun-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sun-img{
+    max-width: 150px;
+    -webkit-animation: rotation 15s infinite linear;
+            animation: rotation 15s infinite linear;
+}
+
+.article-content{
+    -webkit-animation: slideIn .5s ease-in;
+            animation: slideIn .5s ease-in;
+}
+
+@-webkit-keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
 
 /**CATEGORIA*/
 
@@ -4892,17 +4935,47 @@ figcaption{
     flex: 1 1;
     margin-top: 3rem;
     max-width: 25rem;
+    border-radius: 10px;
     background-color: #33b1be78;
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    transition: transform .2s;
+    perspective: 0;
+    -webkit-animation: slideIn .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            animation: slideIn .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
+
+@-webkit-keyframes slideIn {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 
 .food a{
     height: 100%;
 }
 
-.food a:hover{
-    opacity: .9;
-    box-shadow: 0 50px 50px -14px rgba(0,0,0,0.25);
+.food:hover{
+    transform: scale(1.1,1.1);
 }
 
 .food-img{
@@ -4916,6 +4989,36 @@ figcaption{
 
 
 /**DETALLES*/
+
+.details-subtitle{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.details-subtitle img{
+    -webkit-animation: rotation 3s infinite;
+            animation: rotation 3s infinite;
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(10deg);
+    }
+
+    50%{
+        transform: rotate(-10deg);
+    }
+
+    100%{
+        transform: rotate(10deg);
+    }
+    
+}
+
+.details-subtitle h3{
+    margin-left: 1rem;
+}
 
 .food-recipe, 
 .instructions{
@@ -4967,15 +5070,21 @@ figcaption{
     direction: rtl;
 }
 
-.review a{
+.star-review button{
+    background-color: transparent;
+    border: transparent;
+    padding: .2rem;
+}
+
+.review button{
     color:black;
     transition: color .4s;
 }
 
-.review a:hover,
-.review a:hover ~ a,
-.review a:focus,
-.review a:focus ~ a {
+.star-review button:hover,
+.star-review button:hover ~ button,
+.star-review button:focus,
+.star-review button:focus ~ button {
 	color: orange;
 	cursor: pointer;
 	}
@@ -4997,11 +5106,11 @@ figcaption{
     margin: 1%;
     background-color: #33b1be78;
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    transition: transform .2s;
 }
 
 .relationed-food:hover{
-    opacity: .8;
-    box-shadow: 0 50px 50px -14px rgba(0,0,0,0.25);
+    transform: scale(1.1,1.1);
 }
 
 .rel-food-img{
@@ -5016,6 +5125,71 @@ figcaption{
     }
 }
 
+/*ENLACES*/
+
+.link-list a{
+    position: relative;
+    display: inline-block;
+    color: #33b1be;
+    font-weight: 800;
+}
+
+.link-list a::before {
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    color: midnightblue;
+    text-decoration: underline;
+    overflow: hidden;
+    transition: width 275ms ease;
+    width: 0;
+    white-space: nowrap;
+}
+
+.link-list a:hover::before {
+    width: 100%;
+}
+
+
+
+.link-subtitle{
+    -webkit-animation: bounceLeft ease-in 1s forwards;
+            animation: bounceLeft ease-in 1s forwards;
+    opacity: 0;
+}
+
+.link-element{
+    -webkit-animation: bounceLeft ease-in 1s forwards;
+            animation: bounceLeft ease-in 1s forwards;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    opacity: 0;
+}
+
+@-webkit-keyframes bounceLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 /**GENERAL*/
 
@@ -5032,17 +5206,47 @@ figcaption{
     border-bottom: 1px solid;
 }
 
-.active{
-    font-weight: 700;
-    border-bottom: 3px solid white;
-}
 
 h1{
     color: #4bacb8;
-    border-bottom: 2px solid;
     width: 55%;
     font-size: 2rem;
+    position: relative;
 }
+
+h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #4bacb8;
+    -webkit-animation: leftTo .5s ease-in;
+            animation: leftTo .5s ease-in;
+}
+
+@-webkit-keyframes leftTo {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes leftTo {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+
 
 h2{
     font-size: 1.7rem;
