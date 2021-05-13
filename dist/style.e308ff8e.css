@@ -4639,7 +4639,7 @@ main{
 
 /**HEADER*/
 
-header{
+.header{
     background-color: #009eae;
     opacity: .8;
     color: #fff;
@@ -4761,21 +4761,6 @@ header{
     justify-content: space-between;
 }
 
-.logo-index{
-    width: 300px;
-    height: 300px;
-    background-color: white;
-    border-radius: 50%;
-    border: 8px solid black;
-}
-
-@media all and (max-width:30em){
-    .logo-index{
-        width: 100%;
-        height: 100%;
-    }
-}
-
 .link-container{
     display: flex;
     align-items: center;
@@ -4818,7 +4803,7 @@ header{
 
 .lema{
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-style: italic;
 }
 
@@ -4836,10 +4821,6 @@ header{
 
 
 /**PRESENTACIÓN*/
-
-.presentacion article{
-    text-align: justify;
-}
 
 article figure{
     display: flex;
@@ -5120,16 +5101,10 @@ figcaption{
 }
 
 .rel-food-img{
-    width: 400px;
+    max-width: 400px;
     height: 100%;
 }
 
- 
-@media all and (max-width: 50em){
-    .details-image, .rel-food-img{
-    width: 100%;
-    }
-}
 
 /*ENLACES*/
 
@@ -5156,7 +5131,6 @@ figcaption{
 .link-list a:hover::before {
     width: 100%;
 }
-
 
 
 .link-subtitle{
@@ -5214,7 +5188,7 @@ figcaption{
 
 
 h1{
-    color: #4bacb8;
+    color: #1f1f1f;
     width: 55%;
     font-size: 2rem;
     position: relative;
@@ -5227,7 +5201,7 @@ h1::after{
     left: 0;
     width: 100%;
     height: 0.2rem;
-    background-color: #4bacb8;
+    background-color: #1f1f1f;
     -webkit-animation: leftTo .5s ease-in;
             animation: leftTo .5s ease-in;
 }
