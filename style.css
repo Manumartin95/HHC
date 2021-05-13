@@ -86,6 +86,12 @@ main{
     font-weight: 700;
 }
 
+@media screen and (max-width: 40rem){
+    .logo-text{
+        font-size: 1rem;
+    }
+}
+
 .logo-img{    
     width: 7rem;
 }
@@ -134,13 +140,26 @@ main{
 /**PORTADA*/
 .border-top{
     background-color: #009eae;
-    /* opacity: .8; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* padding: 5rem; */
-    /* justify-content: center; */
     justify-content: space-between;
+}
+
+@media screen and (min-width: 40rem) and (max-width: 115rem) {
+    .border-top{
+        background-color: #009eae;
+        display: grid;
+        grid-template-areas:"left-img . ."
+                            ". text ."
+                            ". . right-img"
+    }    
+}
+
+
+
+.logo-text{
+    grid-area: text;
 }
 
 .link-container{
@@ -189,11 +208,13 @@ main{
 }
 
 .test{
+    grid-area: left-img;
     max-width: 100%;
     clip-path: polygon(100% 0, 0 100%, 0 0);
 }
 
 .test2{
+    grid-area: right-img;
     max-width: 100%;
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
@@ -520,27 +541,21 @@ figcaption{
     color: black;
 }
 
-.titulo{
-    color: #A01127;
-    border-bottom: 1px solid;
-}
-
-
-h1{
-    color: #1f1f1f;
+.title{
+    color: #016a75;
     width: 55%;
     font-size: 2rem;
     position: relative;
 }
 
-h1::after{
+.title::after{
     content: '';
     position: absolute;
     bottom: -5px;
     left: 0;
     width: 100%;
     height: 0.2rem;
-    background-color: #1f1f1f;
+    background-color: #016a75;
     animation: leftTo .5s ease-in;
 }
 
