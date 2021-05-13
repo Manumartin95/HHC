@@ -255,13 +255,19 @@ figcaption{
     flex-direction: column;
 }
 
-.sun-img{
-    max-width: 150px;
-    animation: rotation 15s infinite linear;
+.sun-container p{
+    font-weight: 300;
+    font-style: italic;
 }
+
 
 .article-content{
     animation: slideIn .5s ease-in;
+}
+
+.sun-img{
+    max-width: 150px;
+    animation: rotation 10s infinite linear;
 }
 
 @keyframes rotation {

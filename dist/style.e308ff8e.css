@@ -4876,15 +4876,21 @@ figcaption{
     flex-direction: column;
 }
 
-.sun-img{
-    max-width: 150px;
-    -webkit-animation: rotation 15s infinite linear;
-            animation: rotation 15s infinite linear;
+.sun-container p{
+    font-weight: 300;
+    font-style: italic;
 }
+
 
 .article-content{
     -webkit-animation: slideIn .5s ease-in;
             animation: slideIn .5s ease-in;
+}
+
+.sun-img{
+    max-width: 150px;
+    -webkit-animation: rotation 10s infinite linear;
+            animation: rotation 10s infinite linear;
 }
 
 @-webkit-keyframes rotation {
