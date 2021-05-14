@@ -480,7 +480,7 @@ figcaption{
 }
 
 .rel-food-img{
-    max-width: 400px;
+    max-width: 300px;
     height: 100%;
 }
 
@@ -587,7 +587,7 @@ h3{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    color: #4bacb8;
+    color: #016a75;
 }
 
 .breadcrumb a{
