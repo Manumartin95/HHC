@@ -395,7 +395,7 @@ figcaption{
 
 .quantity,
 .instruction-number{
-    color:#70bcaf;
+    color:#016a75;
     font-weight: 700;
     text-align: right;
     width: 55px;
@@ -436,6 +436,10 @@ figcaption{
     background-color: transparent;
     border: transparent;
     padding: .2rem;
+}
+
+.star-review button span{
+    display: none;
 }
 
 .review button{
